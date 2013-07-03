@@ -14,10 +14,10 @@ int main(int argc,char *argv[]){
 	char  smtp_port[32] = {'\0'};
 	int   socket = -1;
 
-	char *username = "530363277@163.com";
-	char *password = "114859";
+	char *username = "";//Your account
+	char *password = "";//Your password
 
-	char *address  = "530363277@163.com";
+	char *address  = "";//Target e-mail address
 	char *subject  = "SMTP Client Demo";
 	char *content  = "this is a test from smtp client written in C!";
 
@@ -36,9 +36,9 @@ int main(int argc,char *argv[]){
 			break;
 	}
 
-	connect2server(&socket,smtp_host,smtp_port);
-	hello(socket,"localhost");
-	authenticate(socket,username,password);
-	send_email(socket,username,address,subject,content);
+	connect2server(&socket,smtp_host,smtp_port);//Connect to the SMTP server
+	hello(socket,"localhost");//Say hello
+	authenticate(socket,username,password);//Check your authentication
+	send_email(socket,username,address,subject,content);//Send an e-mail.
 	return 0;
 }
