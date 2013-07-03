@@ -1,4 +1,4 @@
 tinySMTPClient
 ==============
 
-A tiny SMTP client for you to send via PHP language.
+A tiny SMTP client for you to send via C language.
